@@ -8,7 +8,7 @@ import (
 	"net"
 	"sync"
 
-	pb "github.com/upuneetu/shippy-service-consignment/proto/consignment"
+	pb "github.com/upuneetu/shippy/shippy-service-consignment/proto/consignment"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )
@@ -54,7 +54,6 @@ func (s *service) CreateConsignment(cntx context.Context, req *pb.Consignment) (
 
 func main() {
 	repo := &Repository{}
-
 	// Setup grpc server
 
 	lis, err := net.Listen("tcp", port)
@@ -72,7 +71,7 @@ func main() {
 	reflection.Register(server)
 
 	log.Println("Running on port:", port)
-	err := s.Serve(lis)
+	err = server.Serve(lis)
 	if err != nil {
 		log.Fatalf("failed to server: %v", err)
 	}
