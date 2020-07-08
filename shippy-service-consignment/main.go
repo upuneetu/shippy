@@ -8,7 +8,8 @@ import (
 	"net"
 	"sync"
 
-	pb "github.com/upuneetu/shippy/shippy-service-consignment/proto/consignment"
+	pb "shippy/shippy-service-consignment/proto/consignment"
+
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/reflection"
 )

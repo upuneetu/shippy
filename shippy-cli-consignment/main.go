@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"io/ioutil"
 
-	pb "github.com/upuneetu/shippy/shippy-service-consignment/proto/consignment"
+	pb "shippy/shippy-service-consignment/proto/consignment"
 )
 
 const (
